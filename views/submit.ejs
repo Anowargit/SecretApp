@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <div class="jumbotron centered">
+        <i class="fas fa-lock fa-6x"></i>
+        <h1 class="display-4">User Profile</h1>
+        <p class="secret-text">Welcome <%= user %></p>
+        
+        <form action="/submit" method="POST">
+
+            <div class="form-group">
+                <input type="text" class="form-control text-center" name="user" value="<%= user %>">
+            </div>
+            
+            <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
